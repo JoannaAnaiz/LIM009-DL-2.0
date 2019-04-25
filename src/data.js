@@ -16,7 +16,7 @@
 
 //Filtrando Gender
 
-const filtrarGenero = (data,gender)=>{
+const filtraGenero = (data,gender)=>{
 let arrayFiltra = [];
 for(let i= 0; i<data.length; i++){
 if(data[i].gender===gender){
@@ -36,24 +36,36 @@ if(data[i].house===house){
 return(arrayCasa);
 }
 
+const filtraRolStudent = (data)=>{
+let arrayStudent = [];
+for(let i = 0; i<data.length; i++){
+  if(data[i].hogwartsStudent===true){
+    arrayStudent.push(data[i]);
+  }
+}
+return(arrayStudent);
+};
+
+const filtraRolstaff = (data)=>{
+  let arrayStaff = [];
+  for(let i = 0; i<data.length; i++){
+    if(data[i].hogwartsStaff===true){
+      arrayStaff.push(data[i]);
+    }
+  }
+  return(arrayStaff);
+  }
   
 
-  
-//   const filtraRol = ()=>{
-//     let arrayRol = []
-//     for(let i= 0; i<potter.length; i++){
-//       arrayRol.push(potter[i].hogwartsStudent)
-//     }
-//     return(arrayRol);
-//   }
   
 
 window.magic ={
-  filtrarGenero,
-  filtraCasa
+  filtraGenero,
+  filtraCasa,
+  filtraRolStudent,
+  filtraRolstaff
+
   
 
-// //filtrarGenero,
-// filtraCasa,
-// filtraRol
+
 }

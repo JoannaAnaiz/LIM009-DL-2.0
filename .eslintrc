@@ -7,6 +7,13 @@
   },
   "extends": "eslint:recommended",
   "globals": {
-    "example": false
+    "example": false,
+    "potterObj" :false,
+    "showData" : false,
+    "filtraGenero" : false,
+    "filtraCasa" : false,
+    "filtraRolStudent" : false,
+    "filtraRolstaff" : false
+
   }
 }
