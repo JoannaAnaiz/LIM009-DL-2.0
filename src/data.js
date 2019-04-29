@@ -12,9 +12,8 @@
 //     return newData;
 // }
 
-
-
 //Filtrando Gender
+
 
 const filtraGenero = (data,gender)=>{
 let arrayFiltra = [];
@@ -23,7 +22,7 @@ if(data[i].gender===gender){
   arrayFiltra.push(data[i]);
 }
 }
-return(arrayFiltra);
+return arrayFiltra;
 }
 
 const filtraCasa = (data,house)=>{
@@ -33,29 +32,28 @@ if(data[i].house===house){
   arrayCasa.push(data[i]);
 }
 }
-return(arrayCasa);
+return arrayCasa;
 }
 
-const filtraRolStudent = (data)=>{
-let arrayStudent = [];
-for(let i = 0; i<data.length; i++){
-  if(data[i].hogwartsStudent===true){
-    arrayStudent.push(data[i]);
-  }
-}
-return(arrayStudent);
-};
-
-const filtraRolstaff = (data)=>{
-  let arrayStaff = [];
-  for(let i = 0; i<data.length; i++){
-    if(data[i].hogwartsStaff===true){
-      arrayStaff.push(data[i]);
+const filtraRolStudent = (data,rol)=>{
+  let arrayStudent = [];
+  for(let i=0; i<data.length; i++){
+    if(data[i].hogwartsStudent===rol){
+      arrayStudent.push(data[i]);
     }
   }
-  return(arrayStaff);
-  }
-  
+return arrayStudent;
+}
+
+ const filtraRolStaff = (data,rol)=>{
+   let arrayStaff = [];
+   for(let i=0; i<data.length; i++){
+     if(data[i].hogwartsStaff===rol){
+   let arrayStaff.push(data[i]);
+     }
+   }
+   return arrayStaff;
+ } 
 
   
 
@@ -63,9 +61,6 @@ window.magic ={
   filtraGenero,
   filtraCasa,
   filtraRolStudent,
-  filtraRolstaff
-
-  
-
+  filtraRolStaff,
 
 }

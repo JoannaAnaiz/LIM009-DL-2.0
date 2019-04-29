@@ -16,7 +16,7 @@ const potterData = (data) => {
                   <h4> House: ${data[i].house}</h4>
                   <h4> Species: ${data[i].species}</h4> 
                   <h4> Gender: ${data[i].gender}</h4>  
-                  <h4> Year : ${data[i].yearOfBirth}</h4> 
+                  <h4> Year : ${data[i].dateOfBirth}</h4> 
                   <h4> Rol : ${data[i].hogwartsStudent}</h4>                                 
               </div>`
    }
@@ -31,14 +31,7 @@ const  fetchData = () =>{
     .then( data =>{
        potter = data; 
       potterData(potter)
-   /*    filtraGenero(potter)
-       pintarGenero(potter);
-       filtraCasa(potter);
-       pintarCasa(potter);
-       filtraRolStudent(potter);
-       pintarStudent(potter);
-       filtraRolstaff(potter);
-       pintarStaff(potter); */
+  
 
       })
 }
@@ -50,33 +43,16 @@ botonGeneroElement.addEventListener("change", () => {
   potterData(filtraGenero(potter, condGenero));
 })
 
-
-/*
-const pintarGenero = (data) => {
-  botonGeneroElement.addEventListener("change", () => {
-    let condGenero = botonGeneroElement.value;
-    potterData(filtraGenero(data, condGenero));
-  })
-}
-*/
-
-const pintarCasa  = (data) => {
-  botonHouseElement.addEventListener("change",()=>{
+ botonHouseElement.addEventListener("change",()=>{
     let condCasa = botonHouseElement.value;
-    potterData(filtraCasa(data, condCasa));
+    potterData(filtraCasa(potter, condCasa));
   })
-}
 
-const pintarStudent = (data) =>{
-  botonRolMagicElement.addEventListener("change",() => {
-    let condStud = botonRolMagicElement.value;
-    potterData(filtraRolStudent(data, condStud));
-  })
-}
+ botonRolMagicElement.addEventListener("change",()=>{
+   let condRol = botonRolMagicElement.value;
+   if(potterData(filtraRolStudent(potter, condRol)))
+   else(potterData(filtraRolStaff(potter, condRol)))
+ })
 
-const pintarStaff = (data) =>{
-  botonRolMagicElement.addEventListener("change",() => {
-    let condStaff = botonRolMagicElement.value;
-    potterData(filtraRolstaff(data, condStaff));
-  })
-}
+
+ 
