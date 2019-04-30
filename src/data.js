@@ -1,15 +1,17 @@
-
-// const showData = (data) =>{
-//     let newData = []
-//     for(let i=0; i<data.length; i++){
-//         newData.push({image : data[i].image ,
-//                       actor :data[i].actor,
-//                       name:data[i].name,
-//                       house :data[i].house ,
-//                       species:data[i].species, 
-//                       gender: data[i].gender})  
-//                       }
-//     return newData;
+// const harryData = (data)=>{
+//   let magicData = [];
+//   for(let i= 0; i <data.length;i++){
+//     magicData.push({image: data[i].image,
+//                     name: data[i].name,
+//                     species: data[i].species,
+//                     actor : data[i].actor,
+                   //  house: data[i].house,
+                   //  year: data[i].dateOfBirth,
+//                     gender: data[i].gender}) 
+                                     
+//                     
+//   } 
+//   return magicData;
 // }
 
 //Filtrando Gender
@@ -35,32 +37,21 @@ if(data[i].house===house){
 return arrayCasa;
 }
 
-const filtraRolStudent = (data,rol)=>{
-  let arrayStudent = [];
-  for(let i=0; i<data.length; i++){
-    if(data[i].hogwartsStudent===rol){
-      arrayStudent.push(data[i]);
+const filtraCondition = (data,rol)=>{
+  let arrayCondition = [];
+  for(let i=0; i<data.length;i++){
+    if(data[i][rol]===true){
+      arrayCondition.push(data[i]);
     }
   }
-return arrayStudent;
+  return arrayCondition;
 }
 
- const filtraRolStaff = (data,rol)=>{
-   let arrayStaff = [];
-   for(let i=0; i<data.length; i++){
-     if(data[i].hogwartsStaff===rol){
-   let arrayStaff.push(data[i]);
-     }
-   }
-   return arrayStaff;
- } 
-
-  
 
 window.magic ={
+  // harryData,
   filtraGenero,
   filtraCasa,
-  filtraRolStudent,
-  filtraRolStaff,
+  filtraCondition  
 
 }

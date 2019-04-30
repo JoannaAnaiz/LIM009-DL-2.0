@@ -17,7 +17,8 @@ const potterData = (data) => {
                   <h4> Species: ${data[i].species}</h4> 
                   <h4> Gender: ${data[i].gender}</h4>  
                   <h4> Year : ${data[i].dateOfBirth}</h4> 
-                  <h4> Rol : ${data[i].hogwartsStudent}</h4>                                 
+                  <h4> RolStudent : ${data[i].hogwartsStudent}</h4>
+                  <h4> RolStaff : ${data[i].hogwartsStaff}</h4>                                 
               </div>`
    }
   return boxElement.innerHTML = string;
@@ -30,7 +31,9 @@ const  fetchData = () =>{
     .then( res => res.json())
     .then( data =>{
        potter = data; 
-      potterData(potter)
+       potterData(potter)
+    
+
   
 
       })
@@ -49,10 +52,8 @@ botonGeneroElement.addEventListener("change", () => {
   })
 
  botonRolMagicElement.addEventListener("change",()=>{
-   let condRol = botonRolMagicElement.value;
-   if(potterData(filtraRolStudent(potter, condRol)))
-   else(potterData(filtraRolStaff(potter, condRol)))
- })
-
+   let condStaff = botonRolMagicElement.value;
+   potterData(filtraCondition(potter, condStaff));
+   })
 
  
