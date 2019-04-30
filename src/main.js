@@ -5,8 +5,26 @@ const botonGeneroElement = document.getElementById('botonGenero');
 const botonRolMagicElement = document.getElementById('botonRolMagic')
 const botonHouseElement = document.getElementById('botonHouse')
 
+//Llamando al JSON con Fetch
+let potter;
+let houseMagic; 
+const  fetchData = () =>{
+    fetch('data/potter.json')
+    .then( res => res.json())
+    .then( data =>{
+       potter = data; 
+       houseMagic = showData(potter);
+       console.log(houseMagic)
+       drawData(houseMagic)
+        
+
+      })
+}
+fetchData();
+
+
 //Pintando la data
-const potterData = (data) => {
+const drawData = (data) => {
   let string = '';
   for (let i = 0; i < data.length; i++) {
     string += `<div>
@@ -16,44 +34,27 @@ const potterData = (data) => {
                   <h4> House: ${data[i].house}</h4>
                   <h4> Species: ${data[i].species}</h4> 
                   <h4> Gender: ${data[i].gender}</h4>  
-                  <h4> Year : ${data[i].dateOfBirth}</h4> 
-                  <h4> RolStudent : ${data[i].hogwartsStudent}</h4>
-                  <h4> RolStaff : ${data[i].hogwartsStaff}</h4>                                 
+                  <h4> year : ${data[i].year}</h4> 
+                  <h4> rol : ${data[i].rol}</h4>
+                                                   
               </div>`
    }
   return boxElement.innerHTML = string;
 };
 
-//Llamando al JSON con Fetch
-let potter; 
-const  fetchData = () =>{
-    fetch('data/potter.json')
-    .then( res => res.json())
-    .then( data =>{
-       potter = data; 
-       potterData(potter)
-    
-
-  
-
-      })
-}
-fetchData();
-
-
 botonGeneroElement.addEventListener("change", () => {
   let condGenero = botonGeneroElement.value;
-  potterData(filtraGenero(potter, condGenero));
+  drawData(filtraGenero(houseMagic, condGenero));
 })
 
  botonHouseElement.addEventListener("change",()=>{
     let condCasa = botonHouseElement.value;
-    potterData(filtraCasa(potter, condCasa));
+    drawData(filtraCasa(houseMagic, condCasa));
   })
 
  botonRolMagicElement.addEventListener("change",()=>{
-   let condStaff = botonRolMagicElement.value;
-   potterData(filtraCondition(potter, condStaff));
+   let condition = botonRolMagicElement.value;
+   drawData(filtraRol(houseMagic, condition));
    })
 
  

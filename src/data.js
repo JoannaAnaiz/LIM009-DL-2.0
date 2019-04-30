@@ -1,18 +1,41 @@
-// const harryData = (data)=>{
-//   let magicData = [];
-//   for(let i= 0; i <data.length;i++){
-//     magicData.push({image: data[i].image,
-//                     name: data[i].name,
-//                     species: data[i].species,
-//                     actor : data[i].actor,
-                   //  house: data[i].house,
-                   //  year: data[i].dateOfBirth,
-//                     gender: data[i].gender}) 
-                                     
-//                     
-//   } 
-//   return magicData;
-// }
+const showData = (data)=>{
+  let newData = [];
+  for(let i= 0; i <data.length;i++){
+    if(data[i].hogwartsStudent){
+      newData.push({image: data[i].image,
+                    name: data[i].name,
+                    species: data[i].species,
+                    actor : data[i].actor,
+                    house: data[i].house,
+                    gender: data[i].gender,
+                    rol: "Student",
+                    year: new Date().getFullYear()-data[i].yearOfBirth
+                    }) 
+    }else if (data[i].hogwartsStaff){
+      newData.push({image: data[i].image,
+                    name: data[i].name,
+                    species: data[i].species,
+                    actor : data[i].actor,
+                    house: data[i].house,
+                    gender: data[i].gender,
+                    rol: "Staff",
+                    year: new Date().getFullYear()-data[i].yearOfBirth
+                  })
+                }
+     else newData.push({image: data[i].image,
+                        name: data[i].name,
+                        species: data[i].species,
+                        actor : data[i].actor,
+                        house: data[i].house,
+                        gender: data[i].gender,
+                        rol: "ninguno",
+                        year: new Date().getFullYear()-data[i].yearOfBirth
+                });
+                        
+                    
+  } 
+  return newData;
+}
 
 //Filtrando Gender
 
@@ -37,10 +60,10 @@ if(data[i].house===house){
 return arrayCasa;
 }
 
-const filtraCondition = (data,rol)=>{
+const filtraRol = (data,rol)=>{
   let arrayCondition = [];
   for(let i=0; i<data.length;i++){
-    if(data[i][rol]===true){
+    if(data[i].rol===rol){
       arrayCondition.push(data[i]);
     }
   }
@@ -49,9 +72,9 @@ const filtraCondition = (data,rol)=>{
 
 
 window.magic ={
-  // harryData,
+  showData,
   filtraGenero,
   filtraCasa,
-  filtraCondition  
+  filtraRol  
 
 }
