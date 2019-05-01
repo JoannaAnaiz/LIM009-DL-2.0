@@ -8,43 +8,46 @@
   </head>
   <body>
     <main id="root"></main>
-    <header><img src = "./imagenes/Harry-Potter-Logo.png" alt="Harry-Potter-Logo" class="logo"></header>
-    <h1>Personajes de la Saga de Harry Potter</h1>
-    <div>
-      <h3>Ordenar por edad</h3>
-      <button id="asc">↥</button><label>Ascendiente</label><br>
-      <button id="desc">↧</button><label>Descendiente</label>
-      </div>
-      <h3>Filtrar por</h3>
-    <div>
-      <label>GENERO</label> 
-      <select id="botonGenero"> 
-        <option value="blanco">Genero</option>
-        <option value="female">Femenino</option>
-        <option value="male">Masculino</option>
-      </select>
-    </div>
-    <div>
-      <label>ROL</label> 
-      <select id="botonRolMagic"> 
-        <option value="white">Rol</option>
-        <option value="Student">Student</option>
-        <option value="Staff">Staff</option>
+    <!-- colocando clase -->
+    <section class="col-2  col-mobile-12 menu">
+      <header class="col-mobile-4"><img src = "./imagenes/Harry-Potter-Logo.png" alt="Harry-Potter-Logo" class="logo"></header>
+      <h1>Personajes de la Saga de Harry Potter</h1>
+      <div class="col-mobile-4">
+        <h3>Ordenar por edad</h3>
+        <button id="asc">↥</button><label>Ascendiente</label><br>
+        <button id="desc">↧</button><label>Descendiente</label>
+        </div>
+        
+      <div class="col-mobile-4">
+        <p>Filtrar por</p>
+        <label>GENERO</label> 
+        <select id="botonGenero"> 
+          <option value="blanco">Genero</option>
+          <option value="female">Femenino</option>
+          <option value="male">Masculino</option>
         </select>
-    </div>
-    <div>   
-      <label>CASA</label> 
-      <select id="botonHouse">
-        <option value="blanco">Casa</option>
-        <option value="Gryffindor">Gryffindor</option>
-        <option value="Slytherin">Slytherin</option>
-        <option value="Hufflepuff">Hufflepuff</option>
-        <option value="Ravenclaw">Ravenclaw</option>
-      </select> 
-    </div>  
-    <br>
-  
-  <div id="box">
+      </div>
+      <div>
+        <label>ROL</label> 
+        <select id="botonRolMagic"> 
+          <option value="white">Rol</option>
+          <option value="Student">Student</option>
+          <option value="Staff">Staff</option>
+          </select>
+      </div>
+      <div>   
+        <label>CASA</label> 
+        <select id="botonHouse">
+          <option value="blanco">Casa</option>
+          <option value="Gryffindor">Gryffindor</option>
+          <option value="Slytherin">Slytherin</option>
+          <option value="Hufflepuff">Hufflepuff</option>
+          <option value="Ravenclaw">Ravenclaw</option>
+        </select> 
+      </div>  
+    </section>
+    <!-- colocando clase -->
+  <div id="box" class="col-10"> 
 
   </div>
     
