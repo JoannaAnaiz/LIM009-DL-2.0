@@ -10,6 +10,7 @@ const fetchData = () => {
     .then(res => res.json())
     .then(data => {
       potter = data; 
+      // no reconoce houseMagic, no entiendo?
       houseMagic = showData(potter);
       drawData(houseMagic);
     });
