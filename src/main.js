@@ -2,6 +2,8 @@ const boxElement = document.getElementById('box');
 const botonGeneroElement = document.getElementById('botonGenero');
 const botonRolMagicElement = document.getElementById('botonRolMagic');
 const botonHouseElement = document.getElementById('botonHouse');
+const botonAscElement = document.getElementById('asc');
+const botonDescElement = document.getElementById('desc');
 
 let potter;
 let houseMagic; 
@@ -10,7 +12,6 @@ const fetchData = () => {
     .then(res => res.json())
     .then(data => {
       potter = data; 
-      // no reconoce houseMagic, no entiendo?
       houseMagic = showData(potter);
       drawData(houseMagic);
     });
@@ -20,7 +21,7 @@ fetchData();
 const drawData = (data) => {
   let string = '';
   for (let i = 0; i < data.length; i++) {
-    string += `<div class="col-4 col-mobile-6">
+    string += `<div>
                   <div class="card">
                     <img src=${data[i].image} class = "imagenRedonda" />
                     <p class="center">  ${data[i].actor}</p>
@@ -50,4 +51,14 @@ botonRolMagicElement.addEventListener("change", () => {
   drawData(filtraRol(houseMagic, condition));
 });
 
- 
+botonAscElement.addEventListener("click", () => {
+  const ascendente = sortAge(houseMagic);
+  drawData(ascendente);
+});
+
+botonDescElement.addEventListener("click", () => {
+  const descendente = sortAge(houseMagic);
+  drawData(descendente.reverse());
+});
+
+

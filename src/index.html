@@ -2,23 +2,27 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximun-scale=1.0, minimun-scale=1.0"/>
     <title>Data Lover 2.0 Harry Potter</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <main id="root"></main>
     <!-- colocando clase -->
-    <section class="col-2  col-mobile-12 menu">
-      <header class="col-mobile-4"><img src = "./imagenes/Harry-Potter-Logo.png" alt="Harry-Potter-Logo" class="logo"></header>
-      <h1>Personajes de la Saga de Harry Potter</h1>
-      <div class="col-mobile-4">
-        <h3>Ordenar por edad</h3>
-        <button id="asc">↥</button><label>Ascendiente</label><br>
-        <button id="desc">↧</button><label>Descendiente</label>
+    <section class="menu">
+      <header>
+        <div class="logo">
+          <img src = "./imagenes/Harry-Potter-Logo.png" alt="Harry-Potter-Logo" class="logo">
         </div>
+      </header>  
+      <h1>Personajes de la Saga de Harry Potter</h1>
+      <nav>
+        <p>Ordenar por edad</p>
+        <button id="asc">↥</button><label>Ascendente</label>
+        <button id="desc">↧</button><label>Descendente</label>
+      </nav>
         
-      <div class="col-mobile-4">
+      <nav>
         <p>Filtrar por</p>
         <label>GENERO</label> 
         <select id="botonGenero"> 
@@ -26,16 +30,16 @@
           <option value="female">Femenino</option>
           <option value="male">Masculino</option>
         </select>
-      </div>
-      <div>
+      </nav>
+      <nav>
         <label>ROL</label> 
         <select id="botonRolMagic"> 
           <option value="white">Rol</option>
           <option value="Student">Student</option>
           <option value="Staff">Staff</option>
           </select>
-      </div>
-      <div>   
+        </nav>
+      <nav>   
         <label>CASA</label> 
         <select id="botonHouse">
           <option value="blanco">Casa</option>
@@ -44,17 +48,17 @@
           <option value="Hufflepuff">Hufflepuff</option>
           <option value="Ravenclaw">Ravenclaw</option>
         </select> 
-      </div>  
+      </nav>  
     </section>
     <!-- colocando clase -->
-  <div id="box" class="col-10"> 
+  <div id="box" class="caja"> 
 
   </div>
     
 
-    <footer> 
-      <p>Created by por Joanna Anaiz</p>
-    </footer>
+    <!-- <footer> 
+      <a ref="#">Created by por Joanna Anaiz</a>
+    </footer> -->
 
     <script src="data.js"></script>
     <script src="main.js"></script>
