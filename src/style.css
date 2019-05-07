@@ -19,29 +19,28 @@
 }
 
 .menu {
-    float: left;
     padding: 10px;
     border: 10px solid navy;
     background: #cccccc;
-    width:30%;
-    height: 650px;
-    max-width:300px;
+    width:20%;
+    height: 100vh;
     margin:auto;
-
-  }
-
-.caja {
-    float: center;
-    width:70%;
-    height:150px;
-    margin:auto;
+    position: fixed;
 }
 
-.card {
-    background:rgba(255, 255, 255,.6)
-    box-sizing:border-box;
-    float:left;
-    margin:5%;
-    padding:15px;
-    width:33.33333333%;
-    }
+.flex-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width:80%;
+    margin-left:20%;
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  margin: 10px;
+  padding: 20px;
+  font-size: 30px;
+  width: 12em;
+}
+
