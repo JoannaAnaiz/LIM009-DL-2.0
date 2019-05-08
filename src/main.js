@@ -24,12 +24,12 @@ const drawData = (data) => {
     string += `<div>
                   <div class="card">
                     <img src=${data[i].image} class = "imagenRedonda" />
-                    <p class="center">  ${data[i].actor}</p>
-                    <p class="center"> ${data[i].house}</p>
+                    <strong><center>  ${data[i].actor}</strong></center>
+                    <strong><center> ${data[i].house}</strong></center>
                     <p> Species: ${data[i].species}</p>
-                    <p> rol : ${data[i].rol}</p>
-                    <p> year : ${data[i].year}</p>
-                    <p> Name character: ${data[i].name} </p>
+                    <p> Rol : ${data[i].rol}</p>
+                    <p> Year : ${data[i].year}</p>
+                    <p> Name Character: ${data[i].name} </p>
                    </div> 
                 </div>`;
   }
