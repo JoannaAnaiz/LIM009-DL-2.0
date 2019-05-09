@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <main id="root"></main>
+  <main id="root">
     <!-- colocando clase -->
     <section class="menu">
       <header>
@@ -15,14 +15,12 @@
           <img src = "./imagenes/Harry-Potter-Logo.png" alt="Harry-Potter-Logo" class="logo">
         </div>
       </header>  
-      
-      <nav>
+      <div>
         <p>Ordenar por edad</p>
         <button id="asc">↥</button><label>Ascendente</label>
         <button id="desc">↧</button><label>Descendente</label>
-      </nav>
-        
-      <nav>
+      </div>
+      <div>
         <p>Filtrar por</p>
         <label>GENERO</label> 
         <select id="botonGenero"> 
@@ -30,16 +28,16 @@
           <option value="female">Femenino</option>
           <option value="male">Masculino</option>
         </select>
-      </nav>
-      <nav>
+      </div>
+      <div>
         <label>ROL</label> 
         <select id="botonRolMagic"> 
           <option value="white">Rol</option>
           <option value="Student">Student</option>
           <option value="Staff">Staff</option>
           </select>
-        </nav>
-      <nav>   
+        </div>
+      <div>   
         <label>CASA</label> 
         <select id="botonHouse">
           <option value="blanco">Casa</option>
@@ -48,28 +46,17 @@
           <option value="Hufflepuff">Hufflepuff</option>
           <option value="Ravenclaw">Ravenclaw</option>
         </select> 
-      </nav>  
+      </div>  
     </section>
     <!-- colocando clase -->
     <section class= "titulo">
       <h1>Personajes de la Saga de Harry Potter</h1>
     </section>  
     <div id="box" class="flex-container"></div>
-
-    
-
-    <!-- <footer> 
-      <a ref="#">Created by por Joanna Anaiz</a>
-    </footer> -->
-
-    <script src="data.js"></script>
-    <script src="main.js"></script>
-    <script>
- 
+  </main>  
   
-
-
-    </script>
-  </body>
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+ </body>
 </html>
 
