@@ -8,12 +8,14 @@
   "extends": "eslint:recommended",
   "globals": {
     "example": false,
+    "magic": false,
     "showData" : false,
     "filtraGenero" : false,
     "filtraCasa" : false,
     "filtraRol" : false,
     "newData": false,
-    "houseMagic":false
+    "hauseMagic": false,
+    "sortAge": false
   },
   "rules": {
     "allowTernary": true,
