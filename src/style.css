@@ -28,8 +28,6 @@
 }
 
 .titulo{
-    display: flex;
-    justify-content: flex-start;
     width:20%;
     margin-left:20%;
 }
@@ -38,7 +36,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    width:80%;
     margin-left:20%;
     
 }
@@ -60,6 +57,12 @@
     body{
         background: rgb(60, 60, 179);
     }
+
+    .titulo{
+        width:100%;
+        margin-right:100%;
+    }
+
 }
 
 @media screen and (min-width:1200px) {

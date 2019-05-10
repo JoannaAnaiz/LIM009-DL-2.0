@@ -66,12 +66,12 @@ const filtraRol = (data, rol) => {
 
 
 const sortAge = (data) => {
-  let ageData = data.sort((a, b) => { 
-    a=a.year;
-    b=b.year;
-    if (a > b) {
+  let ageData = data.sort((parametroa, parametrob) => { 
+    parametroa = parametroa.year;
+    parametrob = parametrob.year;
+    if (parametroa > parametrob) {
       return 1;
-    } else if (a < b) {
+    } else if (parametroa < parametrob) {
       return -1;
     }
     // a must be equal to b
@@ -79,9 +79,6 @@ const sortAge = (data) => {
   });
   return ageData;
 };
-
-
-
 
 window.magic = {
   // hauseMagic,
