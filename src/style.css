@@ -14,7 +14,7 @@
 }
 
 .logo{
-    width: 180px;
+    width: 275px;
     
 }
 
@@ -48,6 +48,7 @@
   width: 12em;
   height: 20em;
   border-radius: 5%;
+  border: 10px solid navy;
   
 }
 
@@ -56,6 +57,10 @@
 @media screen and (min-width:360px) {
     body{
         background: rgb(60, 60, 179);
+        background-image: url(imagenes/fondo\ de\ pantalla.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        
     }
 
     .titulo{
@@ -68,6 +73,9 @@
 @media screen and (min-width:1200px) {
     body{
         background: rgb(79, 79, 134);
+        background-image: url(imagenes/fondo\ de\ pantalla.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 
     #root{
