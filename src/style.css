@@ -16,6 +16,7 @@
 .logo{
     width: 275px;
     
+    
 }
 
 .menu {
@@ -60,6 +61,7 @@
         background-image: url(imagenes/fondo\ de\ pantalla.jpg);
         background-repeat: no-repeat;
         background-size: cover;
+              
         
     }
 
